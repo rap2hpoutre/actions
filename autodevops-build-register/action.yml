@@ -74,7 +74,7 @@ runs:
         # cache-from: "type=gha,scope=${{ inputs.imageName }}-cache"
         # cache-to: "type=gha,scope=${{ inputs.imageName }}-cache,mode=max"
 
-      - name: Move cache
-        run: |
-          rm -rf /tmp/.buildx-cache
-          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+    - name: Move cache
+      run: |
+        rm -rf /tmp/.buildx-cache
+        mv /tmp/.buildx-cache-new /tmp/.buildx-cache
